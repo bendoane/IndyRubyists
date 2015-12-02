@@ -1,0 +1,19 @@
+<div class="container">
+  <div class = "jumbotron">
+
+    <h1><sym class="glyphicon glyphicon-globe"></sym> Rubyists of Indy <sym class="glyphicon glyphicon-pushpin"></sym></h1>
+    <div class = "subtitle">
+      <h5>Finding them via GitHub, for all your coding needs.</h5>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <%@rubyists.each do |r|%>
+  <%=r.login%>
+  <%end%>
+  <br>
+  <br>
+  <%=@rubyists%>
+</div>

@@ -3,7 +3,7 @@
 
     <h1><sym class="glyphicon glyphicon-globe"></sym> Rubyists of Indy <sym class="glyphicon glyphicon-pushpin"></sym></h1>
     <div class = "subtitle">
-      <h5>Finding them via GitHub, for all your coding needs.</h5>
+      <h4>Finding them via GitHub, for all your coding needs.</h4>
     </div>
   </div>
 </div>
@@ -15,8 +15,8 @@
       <div class="col-xs-3">
       <h3 class="names"><%=link_to(r.name.downcase, r.html_url)%></h3>
       <p>Created at: <%=r.created_at.strftime("%d/%m/%Y")%></p>
-      <p>Public Repos:<%=r.public_repos%></p>
-      <p>Followers:<%=r.followers%></p>
+      <p>Public Repos: <%=r.public_repos%></p>
+      <p>Followers: <%=r.followers%></p>
       </div>
       <%end%>
 

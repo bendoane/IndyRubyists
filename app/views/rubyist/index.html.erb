@@ -14,7 +14,7 @@
       <%@user_info.each do |r|%>
       <div class="col-xs-3">
       <h3 class="names"><%=link_to(r.name.downcase, r.html_url)%></h3>
-      <p>Created at: <%=r.created_at.strftime("%d/%m/%Y")%></p>
+      <p>Created at: <%=r.created_at.strftime("%m/%d/%Y")%></p>
       <p>Public Repos: <%=r.public_repos%></p>
       <p>Followers: <%=r.followers%></p>
       </div>

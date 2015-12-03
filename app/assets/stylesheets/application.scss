@@ -13,7 +13,22 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+.jumbotron{
+  text-align: center;
+  background-image: url(Indysketch.jpg);
+}
 .subtitle{
   text-align: center;
+}
+
+.names a{
+  margin-top: 20px;
+  margin-bottom: 0;
+  color: #404040;
+  text-decoration: none;
+}
+.names:hover a{
+  color: black;
+  text-transform: uppercase;
+  font-style: italic;
 }

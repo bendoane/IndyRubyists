@@ -15,21 +15,22 @@
 @import "bootstrap";
 
 .container{
-  padding: 0;
-  background-color: #f2f2f2;
+  padding-top: 10px;
 }
 .jumbotron{
   text-align: center;
-  background-image: url(Indysketch.jpg);
   margin:0px;
+  padding: 0px;
+  position: relative;
 }
-.subtitle{
+.title-text{
+  position: absolute;
   text-align: center;
+  top: 10px;
 }
 
 .names a{
-  margin-top: 20px;
-  margin-bottom: 0;
+  margin: 20px 5px 0px 5px;
   color: #404040;
   text-decoration: none;
 }
@@ -37,4 +38,11 @@
   color: black;
   text-transform: uppercase;
   font-style: italic;
+}
+.rubyist-info{
+  padding-top: 5px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #f2f2f2;
+  min-height: 175px;
 }

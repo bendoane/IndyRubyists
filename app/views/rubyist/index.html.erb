@@ -1,23 +1,34 @@
-<div class="container">
-  <div class = "jumbotron">
 
-    <h1><sym class="glyphicon glyphicon-globe"></sym> Rubyists of Indy <sym class="glyphicon glyphicon-pushpin"></sym></h1>
-    <div class = "subtitle">
-      <h4>Finding them via GitHub, for all your coding needs.</h4>
+  <div class = "jumbotron">
+    <%=image_tag("Indysketch.jpg")%>
+
+    <div class="title-text">
+      <div class="col-xs-1"></div>
+      <div class="col-xs-11">
+        <h1><sym class="glyphicon glyphicon-pushpin"></sym> Rubyists of Indy </h1>
+        <h4>Finding them via GitHub, for all your coding needs.</h4>
+      </div>
+      <div class="col-xs-1"></div>
     </div>
   </div>
-</div>
+
 
 
 <div class="container">
-
-      <%@user_info.each do |r|%>
+  <%@user_info.each_slice(4) do |four|%>
+  <div class="row">
+    <% four.each do |user|%>
       <div class="col-xs-3">
-      <h3 class="names"><%=link_to(r.name.downcase, r.html_url)%></h3>
-      <p>Created at: <%=r.created_at.strftime("%m/%d/%Y")%></p>
-      <p>Public Repos: <%=r.public_repos%></p>
-      <p>Followers: <%=r.followers%></p>
+        <div class="rubyist-info">
+          <h3 class="names"><%=link_to(user.name.downcase, user.html_url)%></h3>
+          <p>On Github Since: <%=user.created_at.strftime("%m/%d/%Y")%></p>
+          <p>Public Repos: <%=user.public_repos%></p>
+          <p>Followers: <%=user.followers%></p>
+        </div>
       </div>
       <%end%>
+    </div>
+    <%end%>
+
 
 </div>
